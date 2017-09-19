@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  partsunlimitedwebsite:
+    image: partsunlimitedwebsite
+    build:
+      context: ./src/PartsUnlimitedWebsite
+      dockerfile: Dockerfile
