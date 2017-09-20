@@ -287,12 +287,12 @@ namespace PartsUnlimited.Controllers
                 return View("Error");
             }
             var userLogins = await UserManager.GetLoginsAsync(user);
-            var otherLogins = SignInManager.GetExternalAuthenticationSchemes().Where(auth => userLogins.All(ul => auth.Name != ul.LoginProvider)).ToList();
+            var otherLogins = SignInManager.GetExternalAuthenticationSchemesAsync().Result; //.Where(auth => userLogins.All(ul => auth.Name != ul.LoginProvider)).ToList();
             ViewBag.ShowRemoveButton = user.PasswordHash != null || userLogins.Count > 1;
             return View(new ManageLoginsViewModel
             {
                 CurrentLogins = userLogins,
-                OtherLogins = otherLogins
+               // OtherLogins = otherLogins.Where(auth => userLogins.All(ul => auth.Name != ul.LoginProvider))
             });
         }
 

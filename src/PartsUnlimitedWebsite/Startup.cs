@@ -186,7 +186,7 @@ namespace PartsUnlimited
             });
 
             //Populates the PartsUnlimited sample data
-            SampleData.InitializePartsUnlimitedDatabaseAsync(app.ApplicationServices).Wait();
+          //  SampleData.InitializePartsUnlimitedDatabaseAsync(app.ApplicationServices).Wait();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{44621553-AA7D-4893-8834-79582A7D8348}"
 EndProject
@@ -23,6 +23,10 @@ EndProject
 Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "PartsUnlimitedEnv", "env\PartsUnlimitedEnv.deployproj", "{BD52204A-7129-4FF2-B66C-34A5E6F70CDD}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{089E722E-8D1E-428A-9D31-EDE15090291B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3CFBED5D-2ED8-49DB-96FB-BDAA748DC5A0} = {3CFBED5D-2ED8-49DB-96FB-BDAA748DC5A0}
+		{AF7CC9D8-E786-472B-85CD-8EE5E7429D25} = {AF7CC9D8-E786-472B-85CD-8EE5E7429D25}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
