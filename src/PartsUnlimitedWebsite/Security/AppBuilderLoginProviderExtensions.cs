@@ -1,6 +1,11 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using Microsoft.AspNetCore.Authentication.Facebook;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authentication.MicrosoftAccount;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.Authentication.Twitter;
 using Microsoft.AspNetCore.Builder;
 
 namespace PartsUnlimited.Security
@@ -11,20 +16,22 @@ namespace PartsUnlimited.Security
         {
             if (loginProviders.Azure.Use)
             {
-                app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions()
-                {
-                    ClientId = loginProviders.Azure.ClientId,
-                    Authority = loginProviders.Azure.Authority
-                });
+                //app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions()
+                //{
+                //    ClientId = loginProviders.Azure.ClientId,
+                //    Authority = loginProviders.Azure.Authority
+                //});
             }
 
             if (loginProviders.Facebook.Use)
             {
-                app.UseFacebookAuthentication(new FacebookOptions()
-                {
-                    AppId = loginProviders.Facebook.Key,
-                    AppSecret = loginProviders.Facebook.Secret
-                });
+                app.UseAuthentication();
+                
+                //app.UseFacebookAuthentication(new FacebookOptions()
+                //{
+                //    AppId = loginProviders.Facebook.Key,
+                //    AppSecret = loginProviders.Facebook.Secret
+                //});
             }
 
             if (loginProviders.Google.Use)
