@@ -3,8 +3,6 @@
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +15,7 @@ using PartsUnlimited.Security;
 using PartsUnlimited.Telemetry;
 using PartsUnlimited.WebsiteConfiguration;
 using System;
+using Microsoft.AspNetCore.Identity;
 
 namespace PartsUnlimited
 {
@@ -162,7 +161,8 @@ namespace PartsUnlimited
             app.UseStaticFiles();
 
             // Add cookie-based authentication to the request pipeline
-            app.UseIdentity();
+           // app.UseIdentity();
+            app.UseAuthentication();
 
             // Add login providers (Microsoft/AzureAD/Google/etc).  This must be done after `app.UseIdentity()`
             app.AddLoginProviders(new ConfigurationLoginProviders(Configuration.GetSection("Authentication")));
@@ -186,7 +186,7 @@ namespace PartsUnlimited
             });
 
             //Populates the PartsUnlimited sample data
-            SampleData.InitializePartsUnlimitedDatabaseAsync(app.ApplicationServices).Wait();
+          //  SampleData.InitializePartsUnlimitedDatabaseAsync(app.ApplicationServices).Wait();
         }
     }
 }
