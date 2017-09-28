@@ -47,7 +47,7 @@ In order to use VSTS Build, your VSTS must contain source code for the applicati
 
 * Clone the repository with the following command:
 
-		git clone https://github.com/Microsoft/PartsUnlimited.git
+		git clone https://github.com/ThaddParker/PartsUnlimited.git
 	> After a few seconds of downloading, all of the code should now be on your local machine.
 
 * Move into the repository directory that was just created. In a Windows OS, you can use this command:
