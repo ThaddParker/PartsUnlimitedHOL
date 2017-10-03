@@ -4,7 +4,7 @@ The following instruction is for Windows. For Linux or Mac OS X, please see
 [Getting Started for Linux/OS X](GettingStartedLinuxOSX.md)
 
 ## Set up your machine ##
-1. Install [Visual Studio 2017 Update 3](http://go.microsoft.com/fwlink/?LinkId=517106)
+1. Install [Visual Studio 2015 Update 3](http://go.microsoft.com/fwlink/?LinkId=517106)
 2. Install [Microsoft Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx)
 3. When Web Platform Installer opens, click the Add button for `Microsoft Azure SDK for .NET (VS 2015) - 2.9.5`
 4. When Web Platform Installer opens, click the Add button for `Microsoft Azure PowerShell`
@@ -17,7 +17,7 @@ The following instruction is for Windows. For Linux or Mac OS X, please see
 ```
 
 ## Get the source code ##
-1. Open Visual Studio 2017
+1. Open Visual Studio 2015
 2. Go to View -> Team Explorer
 3. On the Connect page of the Team Explorer window, click the Clone dropdown located under the Local Git Repositories section
 4. Enter the URL https://github.com/Microsoft/PartsUnlimited.git

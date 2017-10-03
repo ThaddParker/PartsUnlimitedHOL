@@ -15,7 +15,7 @@ the app will be deployed to the production site.
 
 ## Pre-requisites:
 * An active Visual Studio Team Services account
-* An Visual Studio 2017 Update 3 client
+* An Visual Studio 2015 Update 3 client
 * Project Admin rights to the Visual Studio Team Services account
 * An active Azure account to host the PartsUnlimited Website as a Web App
 
